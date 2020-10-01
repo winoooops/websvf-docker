@@ -1,3 +1,4 @@
+#I also need to automate the .vsix installation
 FROM ubuntu:20.04
 
 #RUN rm /bin/sh && ln -s /bin/bash /bin/sh
