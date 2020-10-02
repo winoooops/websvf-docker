@@ -40,10 +40,13 @@ RUN yarn
 #generate extension
 RUN npm install -y -g vsce
 RUN vsce package 
+RUN mkdir -p ~/.local/share/code-server/extensions
+ENV XDG_DATA_HOME="~/.local/share/code-server/extensions"
+RUN cp svftools-0.0.3.vsix ~/.local/share/code-server/extensions
 
-
+CMD code-server --install-extension svftools-0.0.3.vsix --force && code-server --auth="none" --host 0.0.0.0 --port 8080
 #go back to the root repo
-WORKDIR /home
+# WORKDIR /root
 
 #install extension from the genereated vsix
 
