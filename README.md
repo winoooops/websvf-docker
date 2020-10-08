@@ -1,49 +1,54 @@
 # **<p align="center">SVF ANALYSIS TOOLS</p>**
 
-<!-- <p align="center">
-<img src='https://github.com/codemapweb/codemap_extension/blob/master/images/logo.png?raw=true' width='480'/>
-</p>
+## **Install Guide**
 
-**<p align="center">Program Analysis tool for bug detection. It is a vscode extension which can be installed into Vscode 1.43.0 at least.</p>**
+### **AWS**
 
-**<p align="center">After the program is compiled by analysis, it is used to display the analysis node information.</p>**
+### **Docker**
+- **Uninstall previous versions of Docker: `sudo apt-get remove docker docker-engine docker.io containerd runc`**
+- **Install packages: `sudo apt-get install \
+                        apt-transport-https \
+                        ca-certificates \
+                        curl \
+                        gnupg-agent \
+                        software-properties-common`**
+- **Add Docker Official GPG key: `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`**
+- **Install Docker Engine: `sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.io`**
+- **Verify Docker Engine is installed correctly: `sudo docker run hello-world`**
+### **Local**
+- **Step 1. Install development tools.**
+    - **git**. **[The git download link](https://code.visualstudio.com/)**
+    - **nodejs**. **[The nodejs download link](https://nodejs.org/zh-cn/download/)**
+    - **yarn**. **[The yarn download link](https://classic.yarnpkg.com/en/docs/install/#windows-stable)**
+    - **vscode**. **[The vscode download link](https://code.visualstudio.com/)**
+- **Step 2. Prepare development environment.**
+    - **cmd: `git clone https://github.com/SVF-tools/WebSVF.git --depth 1`**  
+    - **cmd: `cd ./WebSVF/src/SVFTOOLS`**  
+    - **cmd: `yarn`**  
+    - **cmd: `code .`**  
+<img src='https://github.com/SVF-tools/WebSVF/blob/master/docs/env.gif?raw=true' width='720'/>
 
-## **<p align="center">Architecture Overview</p>**
+- **Step 3. Generate extension**
+    - **keyboard (for open vscode terminal):**  
+        - **Linux: [ Ctrl + shift + `]**  
+        - **Mac: [ ^ + ⇧ + ` ]**
+    - **cmd: `sudo npm install -g vsce`** 
+    - **cmd: `vsce package`**  
+It will generate a extension named: **svftools-[version].vsix**
+<img src='https://github.com/SVF-tools/WebSVF/blob/master/docs/vsce.gif?raw=true' width='720'/>
 
-<p align="center">
-<img src='https://github.com/codemapweb/codemap_extension/blob/master/images/codemap_flowchart.png?raw=true' width='720'/>
-</p> -->
+- **To Compile:**   
+    - **cmd: `yarn compile`**  
+- **To Debug:**  
+    - **keyboard: [ _F5_ ]**  
 
-## **Install Instructions**
+- **How to install extension ?**
+<img src='https://github.com/SVF-tools/WebSVF/blob/master/docs/vsix_install.png?raw=true' width='720'/>
 
--   ### **Requirement**
+### **User Guide**
 
-    -   **System: [Ubuntu 18.04 / 20.04](https://releases.ubuntu.com/20.04/)**
+### **Online**
 
--   ### **Install Software**
+### **Operation**
 
-    -   **Editor: [Vscode](https://code.visualstudio.com/)(Local) or [Code-Server](https://github.com/cdr/code-server)(Online)**
-    -   **Extension: [SVF ANALYSIS TOOLS](https://marketplace.visualstudio.com/items?itemName=TianyangGuan.svftools)**
-
-## **[User Instructions](https://github.com/SVF-tools/WebSVF/blob/master/src/BugReport/README.md#user-instructions)**
-
-## **Dev Instructions**
-
--   ### **Requirement**
-
-    -   **Editor: [Vscode](https://code.visualstudio.com/)**
-
-    ### **Prepare Project**
-
-    -   **Clone _`WebSVF`_ repository**
-    -   **Vscode open _`WebSVF/src/BugReport`_**
-    -   **Vscode open terminial and run _`yarn`_ for library**
-
-    ### **Test and Debug**
-
-    -   **Vscode _`F5`_**
-
-    ### **Generate extension**
-
-    -   **[Install vsce](https://code.visualstudio.com/api/working-with-extensions/publishing-extension)**
-    -   **Run _`vsce package`_**
+## **Dev Guide**
