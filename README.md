@@ -49,6 +49,7 @@ It will generate a extension named: **svftools-[version].vsix**
 ### **Operation**
 
 ## **Dev Guide**
+### **Multi-tenancy using Docker Container** ###
 - **Currently it is recommended to download the docker image from https://hub.docker.com/r/winoooops/websvf-docker**
 - **(Optional)How to use Dockerfile on VM** 
     - **Build the image(cd to the root repo): `docker build -t websvf:0.4 .`**
