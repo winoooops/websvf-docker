@@ -49,9 +49,10 @@ It will generate a extension named: **svftools-[version].vsix**
 ### **Operation**
 
 ## **Dev Guide**
-- **How to use Dockerfile.** 
+- **Currently it is recommended to download the docker image from https://hub.docker.com/r/winoooops/websvf-docker**
+- **(Optional)How to use Dockerfile on VM** 
     - **Build the image(cd to the root repo): `docker build -t websvf:0.4 .`**
-    - **CMD: `docker run -p 8080:8080 --name websvf websvf:0.4`**
+- **Run Docker Container: `docker run -p 8080:8080 --name websvf websvf:0.4`**
 - **Enable Dockerbuild automation with Git Push**
-    - **bind DockerHub to GitHub repo**
+    - **bind DockerHub to GitHub repo(https://medium.com/better-programming/build-your-docker-images-automatically-when-you-push-on-github-18e80ece76af)**
     
