@@ -6,12 +6,7 @@
 
 ### **Docker**
 - **Uninstall previous versions of Docker: `sudo apt-get remove docker docker-engine docker.io containerd runc`**
-- **Install packages: `sudo apt-get install \
-                        apt-transport-https \
-                        ca-certificates \
-                        curl \
-                        gnupg-agent \
-                        software-properties-common`**
+- **Install packages: `sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common`**
 - **Add Docker Official GPG key: `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`**
 - **Install Docker Engine: `sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.io`**
 - **Verify Docker Engine is installed correctly: `sudo docker run hello-world`**
@@ -58,5 +53,5 @@ It will generate a extension named: **svftools-[version].vsix**
     - **Build the image(cd to the root repo): `docker build -t websvf:0.4 .`**
     - **CMD: `docker run -p 8080:8080 --name websvf websvf:0.4`**
 - **Enable Dockerbuild automation with Git Push**
-    - **bind dockerhub to Github repo**
+    - **bind DockerHub to GitHub repo**
     
